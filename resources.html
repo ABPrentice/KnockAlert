@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Resources</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+div.topbar {
+  background-color: white;
+  box-shadow: 0px -50px 1000px black;
+  z-index: 2;
+
+}
+.backgroundimage-container {
+  height:500px;
+}
+.backgroundimage {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  background-color: white;
+}
+
+
+.textbutton:hover {
+
+  transition: all 0.3s ease;
+
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight:bolder;
+  text-shadow: 0px 0px 15px #E0E0E0;
+}
+
+.banner {
+  background-color: white;
+  box-shadow: 0px -50px 1000px black;
+  padding: 15px;
+  font-size: 20px; 
+  font-family: 'Segoe UI';
+  z-index: 1;
+  
+}
+
+.container {
+  padding: 20px;
+  background-color: #eeeeee;
+  z-index: 3;
+}
+
+
+.textbutton {
+  font-size: 30px;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+div.a {
+  text-indent: 50px;
+}
+
+div.b {
+  margin-top:-20px;
+}
+
+body {
+  margin: 0;
+  background-color:white;
+  font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.title {
+  font-size: 80px; 
+  font-family: 'Segoe UI';
+
+  }
+h1,h2,h3,h4,title {
+  text-align:center;
+}
+
+p {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  border-spacing: 15px 10px;
+  color:#303030;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 180px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Animation objects */
+.animated {
+	/* Animation properties for animated elements. */
+	animation-duration: 0.8s;
+	transition-timing-function: ease-in;
+	animation-fill-mode: both;
+}
+.animated--fadeIn {
+	animation-name: fadeIn;
+}
+.animated--fadeFromRight {
+	animation-name: fadeFromRight;
+}
+.animated--fadeFromRightPartial {
+	animation-name: fadeFromRightPartial;
+}
+.animated--fadeFromLeftPartial {
+	animation-name: fadeFromLeftPartial;
+}
+.animated--fadeFromLeft {
+	animation-name: fadeFromLeft;
+}
+.animated--fadeFromBelow {
+	animation-name: fadeFromBelow;
+}
+.animated--fadeFromBelowNoFade {
+  animation-name: fadeFromBelowNoFade
+}
+/* fades */
+@keyframes fadeFromRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(50%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}  
+
+@keyframes fadeFromRightPartial {
+	0% {
+		opacity: 0;
+		transform: translate3d(10%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}  
+
+@keyframes fadeFromLeftPartial {
+	0% {
+		opacity: 0;
+		transform: translate3d(-10%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}  
+@keyframes fadeFromLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+} 
+@keyframes fadeFromBelow {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 10%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+} 
+@keyframes fadeFromBelowNoFade {
+	0% {
+		transform: translate3d(0, 10%, 0);
+	}
+	100% {
+		transform: none;
+	}
+} 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div class = "topbar">
+  <table style =  "width:100%; text-align: center">
+    <tbody>
+      <tr>
+          <td><a class = "textbutton middlehover" href= "index.html">About</a></td>
+          <td><a class = "textbutton" style = "padding-right: 40px" href= "team.html">Team</a></td>
+          <td style = "width:30%;" > <h1 class = "title"> Knock Alert</h1>
+          
+            <div style = "margin: -50px 0 0 0">
+              <h3>Senior Project for CS 426 Spring 2021</h3>
+              </div></td>
+              <td><a class = "textbutton" href= "blog.html">Blog</a></td>
+          <td><a class = "textbutton" href= "resources.html">Resources</a></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
+
+<div class = "backgroundimage-container">
+  <img class = "backgroundimage animated animated--fadeFromRightPartial" src="https://www.econlib.org/wp-content/uploads/2018/06/nonPubbooks.jpg">
+</div>
+
+
+
+<div class = "banner">
+  <h1 class = "animated animated--fadeIn">Project Related Resources</h1>
+</div>
+<div class = "container ">
+  <h3 style = "text-align:left;">Problem domain book:</h3>
+
+  <h4 style = "text-align:left;">Bluetooth Low Energy: The Developer’s Handbook</h4>
+  <div class = "b">
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  R. Heydon, Bluetooth low energy: the developer's handbook. Upper Saddle 
+  River, NJ: Prentice Hall, 2014. </p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  This book describes how to implement bluetooth technology in a system designed
+  around a small battery. It describes how the Bluetooth low energy was developed and
+  how it works. It describes how everything works from the radio waves all the way to how
+  it interfaces with the main device. This book was written for people who want to develop
+  products with bluetooth low energy. </p>
+  
+  <h3 style = "text-align:left;">Reference articles:</h3>
+  
+  <h4 style = "text-align:left;">Novel Bluetooth-Enabled Tubeless Insulin Pump: A User Experience Design Approach for a Connected Digital Diabetes Management Platform</h4>
+  <div class = "b">
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">S. S. Pillalamarri, L. M. Huyett, and A. Abdel-Malek, “Novel Bluetooth-Enabled
+  Tubeless Insulin Pump: A User Experience Design Approach for a Connected
+  Digital Diabetes Management Platform,” Journal of Diabetes Science and
+  Technology, vol. 12, no. 6, pp. 1132–1142, 2018. Available:
+  https://tinyurl.com/y3nb668v </p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  Research on implementing a Bluetooth-Diabetes system, and how the user interface
+  was improved. This was a project that went through several iterations, describing
+  problems about the user experience, and iterating on those problems in order to lead to
+  a more desirable, final product.
+   </p>
+   
+  <h4 style = "text-align:left;">Wi-Fi helping out Bluetooth Smart for an improved home automation user
+  experience
+  </h4>
+  <div class = "b">
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">J. Rossey, I. Moerman, P. Demeester, and J. Hoebeke, “Wi-Fi helping out
+  Bluetooth smart for an improved home automation user experience,” 2016
+  Symposium on Communications and Vehicular Technologies (SCVT), 2016.
+  Available:
+  https://ieeexplore-ieee-org.unr.idm.oclc.org/stamp/stamp.jsp?tp=&arnumber=7797663</p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  Research on using Wi-Fi to enhance “internet of things” experience with Bluetooth
+  devices.This describes the user experience for a system that uses Wi-Fi, while also
+  describing how to build the hardware for such usage. Lastly, it describes how to use the
+  Bluetooth protocol in conjunction with Wi-Fi to build a more stable system, overall.</p>
+  
+  <h4 style = "text-align:left;">Knock Knock, What’s There: Converting Passive Objects into Customizable
+  Smart Controllers</h4>
+  <div class = "b">
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">L. Shi, M. Ashoori, Y. Zhang, and S. Azenkot, “Knock knock, what's there,”
+  Proceedings of the 20th International Conference on Human-Computer
+  Interaction with Mobile Devices and Services, 2018. Available:
+  https://dl.acm.org/doi/10.1145/3229434.3229453</p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  This is research that documents how to detect a knock from other sounds, and how it
+  can be used to trigger events from applications. It describes how to derive a knock from
+  an ambiguous sound or vibration. From there, the research documents how this sound
+  can be used in order to trigger different actions.</p>
+  
+  <h4 style = "text-align:left;">Analysis and Tools for Improved Management of Connectionless and
+  Connection-Oriented BLE Devices Coexistence</h4>
+  <div class = "b">
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">D. C. Antonio et al, "Analysis and Tools for Improved Management of
+  Connectionless and Connection-Oriented BLE Devices Coexistence," Sensors,
+  vol. 17, (4), pp. 792, 2017. Available:
+  https://search-proquest-com.unr.idm.oclc.org/docview/2108667733?https://searc
+  h.proquest.com/advancedtechaerospace&pq-origsite=summon</p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">This is an article analyzing tools used in implementing low energy bluetooth devices
+  which are useful in applications that need a long battery life. It also gives a detailed
+  summary of the methods used in systems that use this technology.</p>
+  
+  <h3 style = "text-align:left;">Project Related Websites:</h3>
+  
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">Native Modules · React Native for Windows + macOS, Microsoft,
+  https://microsoft.github.io/react-native-windows/docs/native-modules, accessed
+  Oct. 28th, 2020</p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">  The Native Modules webpage for React Native documents how we can use native
+  Windows WinRT functionality from within React Native. The webpage contains tutorials
+  and examples on how to implement these modules and use React Native. Team
+  members who work on the software will utilize this documentation as a guide for how to
+  build the project using React Native.</p>
+  
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">Windows UWP applications | Microsoft Docs, Microsoft,
+  https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth?view=winrt19041, accessed Oct. 28th, 2020
+  </p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">The Windows UWP applications documentation is native Windows documentation about
+  how to utilize native Windows functions in C++/C#. This website includes instructions
+  23
+  about how to use Windows Bluetooth in order to make the computer act as a receiver to
+  the Embedded System. It also documents how to transmit data over Bluetooth.</p>
+  
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">Hackaday, https://hackaday.com/, accessed Oct. 21st, 2020</p>
+  <p style="text-align:justify; margin-left: 60px; margin-right: 60px;">Forum where engineers and hobbyists showcase a wide range of projects in all
+  engineering disciplines, mostly computer science and engineering. Many projects
+  include detailed descriptions of how they were implemented and some have DIY how-to
+  guides and links to youtube videos.</p>
+</div>
+<script>
+  $(document).scroll(function() {
+  var scroll = $(window).scrollTop();
+  $(".backgroundimage").css("top", "0" + (scroll / 1.8) + "px");
+  });
+</script>
+
+</body>
+
+</html>
