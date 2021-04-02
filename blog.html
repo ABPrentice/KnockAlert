@@ -1,299 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>Blog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      div.topbar {
+        background-color: white;
+        box-shadow: 0px -50px 1000px black;
+        z-index: 2;
+      }
+      .backgroundimage-container {
+        height: 500px;
+      }
+      .backgroundimage {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: white;
+      }
 
-<title>Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+      .textbutton:hover {
+        transition: all 0.3s ease;
 
+        padding-right: 20px;
+        padding-left: 20px;
+        font-weight: bolder;
+        text-shadow: 0px 0px 15px #e0e0e0;
+      }
 
-div.topbar {
-  background-color: white;
-  box-shadow: 0px -50px 1000px black;
-  z-index: 2;
+      .banner {
+        background-color: white;
+        box-shadow: 0px -50px 1000px black;
+        padding: 15px;
+        font-size: 20px;
+        font-family: "Segoe UI";
+        z-index: 1;
+      }
 
-}
-.backgroundimage-container {
-  height:500px;
-}
-.backgroundimage {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  background-color: white;
-}
+      .container {
+        padding: 20px;
+        background-color: #eeeeee;
+        z-index: 3;
+      }
 
+      .textbutton {
+        font-size: 30px;
+        padding: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
 
-.textbutton:hover {
+      div {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      div.a {
+        text-indent: 50px;
+      }
 
-  transition: all 0.3s ease;
+      div.b {
+        margin-top: -20px;
+      }
 
-  padding-right: 20px;
-  padding-left: 20px;
-  font-weight:bolder;
-  text-shadow: 0px 0px 15px #E0E0E0;
-}
+      body {
+        margin: 0;
+        background-color: white;
+        font-family: "Segoe UI Light", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-.banner {
-  background-color: white;
-  box-shadow: 0px -50px 1000px black;
-  padding: 15px;
-  font-size: 20px; 
-  font-family: 'Segoe UI';
-  z-index: 1;
-  
-}
+      .title {
+        font-size: 80px;
+        font-family: "Segoe UI";
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      title {
+        text-align: center;
+      }
 
-.container {
-  padding: 20px;
-  background-color: #eeeeee;
-  z-index: 3;
-}
+      p {
+        font-size: 30px;
+      }
 
+      * {
+        box-sizing: border-box;
+        border-spacing: 15px 10px;
+        color: #303030;
+      }
 
-.textbutton {
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 180px;
+      }
 
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
+      /* Animation objects */
+      .animated {
+        /* Animation properties for animated elements. */
+        animation-duration: 0.8s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+      }
+      .animated--fadeIn {
+        animation-name: fadeIn;
+      }
+      .animated--fadeFromRight {
+        animation-name: fadeFromRight;
+      }
+      .animated--fadeFromRightPartial {
+        animation-name: fadeFromRightPartial;
+      }
+      .animated--fadeFromLeftPartial {
+        animation-name: fadeFromLeftPartial;
+      }
+      .animated--fadeFromLeft {
+        animation-name: fadeFromLeft;
+      }
+      .animated--fadeFromBelow {
+        animation-name: fadeFromBelow;
+      }
+      .animated--fadeFromBelowNoFade {
+        animation-name: fadeFromBelowNoFade;
+      }
+      /* fades */
+      @keyframes fadeFromRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(50%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-div {
-  text-align: justify;
-  text-justify: inter-word;
-}
-div.a {
-  text-indent: 50px;
-}
+      @keyframes fadeFromRightPartial {
+        0% {
+          opacity: 0;
+          transform: translate3d(10%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-div.b {
-  margin-top:-20px;
-}
+      @keyframes fadeFromLeftPartial {
+        0% {
+          opacity: 0;
+          transform: translate3d(-10%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromLeft {
+        0% {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromBelow {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 10%, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromBelowNoFade {
+        0% {
+          transform: translate3d(0, 10%, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
 
-body {
-  margin: 0;
-  background-color:white;
-  font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
-}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topbar">
+      <table style="width: 100%; text-align: center">
+        <tbody>
+          <tr>
+            <td>
+              <a class="textbutton middlehover" href="index.html">About</a>
+            </td>
+            <td>
+              <a class="textbutton" style="padding-right: 40px" href="team.html"
+                >Team</a
+              >
+            </td>
+            <td style="width: 30%">
+              <h1 class="title">Knock Alert</h1>
 
+              <div style="margin: -50px 0 0 0">
+                <h3>Senior Project for CS 426 Spring 2021</h3>
+              </div>
+            </td>
+            <td><a class="textbutton" href="blog.html">Blog</a></td>
+            <td><a class="textbutton" href="resources.html">Resources</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-.title {
-  font-size: 80px; 
-  font-family: 'Segoe UI';
+    <div class="backgroundimage-container">
+      <img
+        class="backgroundimage animated animated--fadeFromRightPartial"
+        src="https://i.imgur.com/ourla2c.jpg"
+      />
+    </div>
 
-  }
-h1,h2,h3,h4,title {
-  text-align:center;
-}
+    <div class="banner">
+      <h1 class="animated animated--fadeIn">Blog</h1>
+    </div>
 
-p {
-  font-size: 30px;
-}
+    <div class="container" style="margin: 100px">
+      <p><b>March 16, 2021 - It all works!</b></p>
+      <p>
+        (Image coming soon.) The team was able to connect the embedded device,
+        detect knocks, and show a notification!
+      </p>
+    </div>
 
-* {
-  box-sizing: border-box;
-  border-spacing: 15px 10px;
-  color:#303030;
-}
+    <div class="container" style="margin: 100px">
+      <p><b>March 15, 2021 - UI tests, and notifications!</b></p>
+      <img
+        src="https://i.imgur.com/bTwAz9Y.png"
+        alt="Bluetooth testing ui"
+      /><img src="https://imgur.com/WEtxLy4.png" alt="Notification" />
+      <p>
+        A UI for Bluetooth testing was created to make it easier to find the
+        device. In addition, the team was able to code notifications to show up
+        over fullscreen games.
+      </p>
+    </div>
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 180px;
-}
+    <div class="container" style="margin: 100px">
+      <p><b>March 09, 2021 - We have an end-to-end connection!</b></p>
+      <img
+        src="https://i.imgur.com/gnostv6.pngf"
+        alt="Image of Bluetooth Notificatiosn in Console"
+        height="500px"
+      />
+      <p>
+        The team was able to subscribe to a Bluetooth device and relay its
+        readings to the UI.
+      </p>
+    </div>
+    <div class="container" style="margin: 100px">
+      <p><b>February 18, 2021 - Bluetooth UI</b></p>
+      <img src="https://i.imgur.com/63NNoin.gif" alt="Bluetooth UI demo" />
+      <p>
+        The team was able to create a UI that pairs and unpairs with Bluetooth
+        devices.
+      </p>
+    </div>
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    <div class="container" style="margin: 100px">
+      <p><b>January 30, 2021 - Front end UI</b></p>
+      <iframe
+        src="https://www.dropbox.com/s/h92ru7b0ypu0n6y/VOy9Dli6bb.mp4?raw=1"
+        name="UI demo"
+        allowfullscreen
+        height="400px"
+        width="600px"
+      ></iframe>
+      <p>
+        The team was able to create a UI for the Front-end, using React and
+        Electron.
+      </p>
+    </div>
 
-/* Animation objects */
-.animated {
-	/* Animation properties for animated elements. */
-	animation-duration: 0.8s;
-	transition-timing-function: ease-in;
-	animation-fill-mode: both;
-}
-.animated--fadeIn {
-	animation-name: fadeIn;
-}
-.animated--fadeFromRight {
-	animation-name: fadeFromRight;
-}
-.animated--fadeFromRightPartial {
-	animation-name: fadeFromRightPartial;
-}
-.animated--fadeFromLeftPartial {
-	animation-name: fadeFromLeftPartial;
-}
-.animated--fadeFromLeft {
-	animation-name: fadeFromLeft;
-}
-.animated--fadeFromBelow {
-	animation-name: fadeFromBelow;
-}
-.animated--fadeFromBelowNoFade {
-  animation-name: fadeFromBelowNoFade
-}
-/* fades */
-@keyframes fadeFromRight {
-	0% {
-		opacity: 0;
-		transform: translate3d(50%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
+    <div class="container">
+      <p></p>
+    </div>
 
-@keyframes fadeFromRightPartial {
-	0% {
-		opacity: 0;
-		transform: translate3d(10%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
-
-@keyframes fadeFromLeftPartial {
-	0% {
-		opacity: 0;
-		transform: translate3d(-10%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
-@keyframes fadeFromLeft {
-	0% {
-		opacity: 0;
-		transform: translate3d(-100%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-} 
-@keyframes fadeFromBelow {
-	0% {
-		opacity: 0;
-		transform: translate3d(0, 10%, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-} 
-@keyframes fadeFromBelowNoFade {
-	0% {
-		transform: translate3d(0, 10%, 0);
-	}
-	100% {
-		transform: none;
-	}
-} 
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-
-</style>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-</head>
-<body>
-
-
-<div class = "topbar">
-  <table style =  "width:100%; text-align: center">
-    <tbody>
-      <tr>
-          <td><a class = "textbutton middlehover" href= "index.html">About</a></td>
-          <td><a class = "textbutton" style = "padding-right: 40px" href= "team.html">Team</a></td>
-          <td style = "width:30%;" > <h1 class = "title"> Knock Alert</h1>
-          
-            <div style = "margin: -50px 0 0 0">
-              <h3>Senior Project for CS 426 Spring 2021</h3>
-              </div></td>
-              <td><a class = "textbutton" href= "blog.html">Blog</a></td>
-          <td><a class = "textbutton" href= "resources.html">Resources</a></td>
-
-      </tr>
-    </tbody>
-  </table>
-
-
-</div>
-
-<div class = "backgroundimage-container">
-  <img class = "backgroundimage animated animated--fadeFromRightPartial" src="https://c.tadst.com/gfx/750w/sunrise-sunset-sun-calculator.jpg">
-</div>
-
-
-
-<div class = "banner">
-  <h1 class = "animated animated--fadeIn">Blog</h1>
-</div>
-
-<div class = "container" style = "margin: 100px">
-  <p><b>March 16, 2021 - It all works!</b></p>
-   <p>(Image coming soon.) The team was able to connect the embedded device, detect knocks, and show a notification!</p>
-</div>
-
-<div class = "container" style = "margin: 100px">
-  <p><b>March 15, 2021 - UI tests, and notifications!</b></p>
-  <img src="https://i.imgur.com/bTwAz9Y.png" alt="Bluetooth testing ui"><img src="https://imgur.com/WEtxLy4.png" alt="Notification">
-   <p>A UI for Bluetooth testing was created to make it easier to find the device. In addition, the team was able to code notifications to show up over fullscreen games.</p>
-</div>
-
-<div class = "container" style = "margin: 100px">
-  <p><b>March 09, 2021 - We have an end-to-end connection!</b></p>
-  <img src="https://i.imgur.com/gnostv6.pngf" alt="Image of Bluetooth Notificatiosn in Console" height="500px">
-   <p>The team was able to subscribe to a Bluetooth device and relay its readings to the UI.</p>
-</div>
-<div class = "container" style = "margin: 100px">
-  <p><b>February 18, 2021 - Bluetooth UI</b></p>
-  <img src="https://i.imgur.com/63NNoin.gif" alt="Bluetooth UI demo">
-   <p>The team was able to create a UI that pairs and unpairs with Bluetooth devices.</p>
-</div>
-
-<div class = "container" style = "margin: 100px">
-  <p><b>January 30, 2021 - Front end UI</b></p>
-  <iframe  src="https://www.dropbox.com/s/h92ru7b0ypu0n6y/VOy9Dli6bb.mp4?raw=1" name="UI demo" allowfullscreen height="400px" width="600px"></iframe>
-   <p>The team was able to create a UI for the Front-end, using React and Electron.</p>
-</div>
-
-<div class = "container">
-  <p> </p>
-</div>
-
-<script>
- // Src: https://stackoverflow.com/questions/51363284/how-to-make-the-scroll-speed-of-background-image-of-the-webpage-slower
-  $(document).scroll(function() {
-  var scroll = $(window).scrollTop();
-  $(".backgroundimage").css("top", "0" + (scroll / 1.10) + "px");
-  });
-</script>
-
-</body>
-
+    <script>
+      // Src: https://stackoverflow.com/questions/51363284/how-to-make-the-scroll-speed-of-background-image-of-the-webpage-slower
+      $(document).scroll(function () {
+        var scroll = $(window).scrollTop();
+        $(".backgroundimage").css("top", "0" + scroll / 2.0 + "px");
+      });
+    </script>
+  </body>
 </html>
