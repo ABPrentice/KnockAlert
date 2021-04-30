@@ -324,6 +324,50 @@ a.ContactLink:hover {
   padding: 0; 
   margin: 0;
 }
+
+@media
+/* From https://codepen.io/team/css-tricks/pen/wXgJww?editors=1100 */
+	  (max-width: 1300px), (min-device-width: 0px) 
+    and (max-device-width: 768px)  {
+
+		.tileTable table, .tileTable thead, .tileTable tbody, .tileTable th, .tileTable td, .tileTable tr {
+			display: block;
+		}
+
+
+    .tileTable tr {
+      margin: 0 0 1rem 0;
+    }
+
+		.tileTable td {
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		.tileTable td:before {
+			position: absolute;
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+    .mobiletile1 {
+      background-color: rgb(0, 117, 250); 
+    }
+    .mobiletile2 {
+      background-color: rgb(19, 148, 105);
+    }
+    .mobiletile3 {
+      margin-top: -25px;
+      background-color: rgb(0, 117, 250); 
+    }
+    .mobiletile4 {
+      background-color: rgb(19, 148, 105);
+    }
+}
 </style>
 
 
@@ -367,7 +411,7 @@ a.ContactLink:hover {
 <table class= "tileTable">
   <tr>
     <th>
-      <div class = "animated animated--fadeFromBelow TileA_1" style = "margin-top:-1px">
+      <div class = "animated animated--fadeFromBelow TileA_1 mobiletile1" style = "margin-top:-1px">
         <img class = "portraitA centered" src="https://i.imgur.com/XWaRQVO.jpg" alt="Kevin Gundlach Portrait"><br>
 
         <h1><span class="TileTitle_1_Larger_first_letter">K</span><span class="TileTitle_1_Larger">EVIN </span> <span class="TileTitle_1_Larger_first_letter">G</span><span class="TileTitle_1_Larger">UNDLACH</span></h1>
@@ -379,7 +423,7 @@ a.ContactLink:hover {
       </div>
     </th>
     <th>
-      <div class = "animated animated--fadeFromBelow TileA_2">
+      <div class = "animated animated--fadeFromBelow TileA_2 mobiletile2">
         <img class = "portraitA centered" src=https://i.imgur.com/fYVIVRA.png" alt="Nicolas Jones Portrait"><br>
 
         <h1><span class="TileTitle_1_Larger_first_letter">N</span><span class="TileTitle_1_Larger">ICOLAS </span> <span class="TileTitle_1_Larger_first_letter">J</span><span class="TileTitle_1_Larger">ONES</span></h1>
@@ -393,7 +437,7 @@ a.ContactLink:hover {
   </tr>
   <tr>
     <th>
-      <div class = "animated animated--fadeFromBelow TileA_2">
+      <div class = "animated animated--fadeFromBelow TileA_2 mobiletile3">
         <img class = "portraitA centered" src="https://i.imgur.com/GzEcI5Y.png" alt="Ben Hull Portrait"><br>
 
         <h1><span class="TileTitle_1_Larger_first_letter">B</span><span class="TileTitle_1_Larger">EN </span> <span class="TileTitle_1_Larger_first_letter">H</span><span class="TileTitle_1_Larger">ULL</span></h1>
@@ -405,7 +449,7 @@ a.ContactLink:hover {
       </div>
     </th>
     <th>
-      <div class = "animated animated--fadeFromBelow TileA_1">
+      <div class = "animated animated--fadeFromBelow TileA_1 mobiletile4">
         <img class = "portraitA centered" src="https://i.imgur.com/oeGT1RT.png" alt="Alton Prentice Portrait"><br>
 
         <h1><span class="TileTitle_1_Larger_first_letter">A</span><span class="TileTitle_1_Larger">LTON </span> <span class="TileTitle_1_Larger_first_letter">P</span><span class="TileTitle_1_Larger">RENTICE</span></h1>
