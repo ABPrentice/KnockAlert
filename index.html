@@ -1,277 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>Knock Alert! - Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      div.topbar {
+        background-color: white;
+        box-shadow: 0px -50px 1000px black;
+        z-index: 2;
+      }
+      .backgroundimage-container {
+        height: 500px;
+      }
+      .backgroundimage {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: white;
+      }
 
-<title>Resources</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+      .textbutton:hover {
+        transition: all 0.3s ease;
 
+        padding-right: 20px;
+        padding-left: 20px;
+        font-weight: bolder;
+        text-shadow: 0px 0px 15px #e0e0e0;
+      }
 
-div.topbar {
-  background-color: white;
-  box-shadow: 0px -50px 1000px black;
-  z-index: 2;
+      .banner {
+        background-color: white;
 
-}
-.backgroundimage-container {
-  height:500px;
-}
-.backgroundimage {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  background-color: white;
-}
+        padding: 15px;
+        font-size: 20px;
+        font-family: "Segoe UI";
+        z-index: 1;
+      }
 
+      .container {
+        padding: 20px;
+        background-color: #eeeeee;
+        z-index: 1;
+      }
 
-.textbutton:hover {
+      .textbutton {
+        font-size: 30px;
+        padding: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
 
-  transition: all 0.3s ease;
+      div {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      div.a {
+        text-indent: 50px;
+      }
 
-  padding-right: 20px;
-  padding-left: 20px;
-  font-weight:bolder;
-  text-shadow: 0px 0px 15px #E0E0E0;
-}
+      div.b {
+        margin-top: -20px;
+      }
 
-.banner {
-  background-color: white;
-  box-shadow: 0px -50px 1000px black;
-  padding: 15px;
-  font-size: 20px; 
-  font-family: 'Segoe UI';
-  z-index: 1;
-  
-}
+      body {
+        margin: 0;
+        background-color: white;
+        font-family: "Segoe UI Light", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-.container {
-  padding: 20px;
-  background-color: #eeeeee;
-  z-index: 3;
-}
+      .title {
+        font-size: 80px;
+        font-family: "Segoe UI";
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      title {
+        text-align: center;
+      }
 
+      p {
+        font-size: 30px;
+      }
 
-.textbutton {
-  font-size: 30px;
-  padding: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+      * {
+        box-sizing: border-box;
+        border-spacing: 15px 10px;
+        color: #303030;
+      }
 
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 180px;
+      }
 
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      a.button {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+        transition: border-bottom 300ms;
+      }
+      a.button:hover {
+        border-bottom: 1px solid rgb(0, 0, 0);
+      }
+      /* Animation objects */
+      .animated {
+        /* Animation properties for animated elements. */
+        animation-duration: 0.8s;
+        transition-timing-function: ease-in;
+        animation-fill-mode: both;
+      }
+      .animated--fadeIn {
+        animation-name: fadeIn;
+      }
+      .animated--fadeFromRight {
+        animation-name: fadeFromRight;
+      }
+      .animated--fadeFromRightPartial {
+        animation-name: fadeFromRightPartial;
+      }
+      .animated--fadeFromLeftPartial {
+        animation-name: fadeFromLeftPartial;
+      }
+      .animated--fadeFromLeft {
+        animation-name: fadeFromLeft;
+      }
+      .animated--fadeFromBelow {
+        animation-name: fadeFromBelow;
+      }
+      .animated--fadeFromBelowNoFade {
+        animation-name: fadeFromBelowNoFade;
+      }
 
-div {
-  text-align: justify;
-  text-justify: inter-word;
-}
-div.a {
-  text-indent: 50px;
-}
+      /* fades */
+      @keyframes fadeFromRight {
+        0% {
+          opacity: 0;
+          transform: translate3d(50%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-div.b {
-  margin-top:-20px;
-}
+      @keyframes fadeFromRightPartial {
+        0% {
+          opacity: 0;
+          transform: translate3d(10%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
 
-body {
-  margin: 0;
-  background-color:white;
-  font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
-}
+      @keyframes fadeFromLeftPartial {
+        0% {
+          opacity: 0;
+          transform: translate3d(-10%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromLeft {
+        0% {
+          opacity: 0;
+          transform: translate3d(-100%, 0, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromBelow {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 10%, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes fadeFromBelowNoFade {
+        0% {
+          transform: translate3d(0, 10%, 0);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topbar">
+      <table style="width: 100%; text-align: center">
+        <tbody>
+          <tr>
+            <td>
+              <a class="textbutton middlehover" href="index.html">About</a>
+            </td>
+            <td>
+              <a class="textbutton" style="padding-right: 40px" href="team.html"
+                >Team</a
+              >
+            </td>
+            <td style="width: 30%">
+              <h1 class="title">Knock Alert</h1>
 
-.title {
-  font-size: 80px; 
-  font-family: 'Segoe UI';
+              <div style="margin: -50px 0 0 0">
+                <h3>Senior Project for CS 426 Spring 2021</h3>
+              </div>
+            </td>
+            <td><a class="textbutton" href="blog.html">Blog</a></td>
+            <td><a class="textbutton" href="resources.html">Resources</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  }
-h1,h2,h3,h4,title {
-  text-align:center;
-}
+    <div class="backgroundimage-container">
+      <img
+        class="backgroundimage animated animated--fadeFromLeftPartial"
+        src="https://i.imgur.com/rVMZZ8l.jpg"
+      />
+    </div>
 
-p {
-  font-size: 30px;
-}
+    <div class="banner">
+      <h1 class="animated animated--fadeIn">About</h1>
+    </div>
+    <div class="container">
+      <div class="a">
+        <p style="text-align: justify; margin-left: 60px; margin-right: 60px">
+          Knock Alert is a system that is composed of a combination of an
+          Embedded System and a Desktop application. The device allows people to
+          receive a visual notification on their computer when a door knock is
+          detected, so that the user doesn't miss a door knock. This allows for
+          users to stay in "Flow" or focus, wearing headphones without missing
+          any door knock. The Embedded System will detects door knocks by using
+          an accelerometer to measure vibrations that reverberate through the
+          door. The system is set up so that it filters out sounds that are not
+          obviously door knocks. The Embedded System is designed to be mounted
+          onto a door where it will communicate with the desktop or mobile
+          application over Bluetooth.
+        </p>
 
-* {
-  box-sizing: border-box;
-  border-spacing: 15px 10px;
-  color:#303030;
-}
+        <p style="text-align: justify; margin-left: 60px; margin-right: 60px">
+          The application was being developed natively using the Universal
+          Windows Platform as the back end application, while the front end
+          application was being made in Electron. However, the team learned that
+          UWP was purposefully designed in a way to make inter-process
+          communication difficult, so the team is now exclusively using
+          Electron. When the embedded system detects a knock, it will determine
+          if it is significant enough to relay the data to the application. The
+          computer or mobile device will then determine if the detected signal
+          is a door knock and alert the user by displaying a notification and
+          playing a chime. Both the chime and message can be customized to the
+          user's liking. The message will appear on the user's screen regardless
+          of what application is currently running so that the message is not
+          missed.
+        </p>
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 180px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Animation objects */
-.animated {
-	/* Animation properties for animated elements. */
-	animation-duration: 0.8s;
-	transition-timing-function: ease-in;
-	animation-fill-mode: both;
-}
-.animated--fadeIn {
-	animation-name: fadeIn;
-}
-.animated--fadeFromRight {
-	animation-name: fadeFromRight;
-}
-.animated--fadeFromRightPartial {
-	animation-name: fadeFromRightPartial;
-}
-.animated--fadeFromLeftPartial {
-	animation-name: fadeFromLeftPartial;
-}
-.animated--fadeFromLeft {
-	animation-name: fadeFromLeft;
-}
-.animated--fadeFromBelow {
-	animation-name: fadeFromBelow;
-}
-.animated--fadeFromBelowNoFade {
-  animation-name: fadeFromBelowNoFade
-}
-/* fades */
-@keyframes fadeFromRight {
-	0% {
-		opacity: 0;
-		transform: translate3d(50%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
-
-@keyframes fadeFromRightPartial {
-	0% {
-		opacity: 0;
-		transform: translate3d(10%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
-
-@keyframes fadeFromLeftPartial {
-	0% {
-		opacity: 0;
-		transform: translate3d(-10%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}  
-@keyframes fadeFromLeft {
-	0% {
-		opacity: 0;
-		transform: translate3d(-100%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-} 
-@keyframes fadeFromBelow {
-	0% {
-		opacity: 0;
-		transform: translate3d(0, 10%, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-} 
-@keyframes fadeFromBelowNoFade {
-	0% {
-		transform: translate3d(0, 10%, 0);
-	}
-	100% {
-		transform: none;
-	}
-} 
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-
-</style>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-</head>
-<body>
-
-
-<div class = "topbar">
-  <table style =  "width:100%; text-align: center">
-    <tbody>
-      <tr>
-          <td><a class = "textbutton middlehover" href= "index.html">About</a></td>
-          <td><a class = "textbutton" style = "padding-right: 40px" href= "team.html">Team</a></td>
-          <td style = "width:30%;" > <h1 class = "title"> Knock Alert</h1>
-          
-            <div style = "margin: -50px 0 0 0">
-              <h3>Senior Project for CS 426 Spring 2021</h3>
-              </div></td>
-              <td><a class = "textbutton" href= "blog.html">Blog</a></td>
-          <td><a class = "textbutton" href= "resources.html">Resources</a></td>
-
-      </tr>
-    </tbody>
-  </table>
-
-
-</div>
-
-<div class = "backgroundimage-container">
-  <img class = "backgroundimage animated animated--fadeFromLeftPartial" src="https://i.imgur.com/rVMZZ8l.jpg">
-</div>
-
-
-
-<div class = "banner">
-  <h1 class = "animated animated--fadeIn">About</h1>
-</div>
-<div class = "container ">
-  <div class = "a">
-    <p style="text-align:justify; margin-left: 60px; margin-right: 60px;"> Knock Alert is a system that is composed of a combination of an Embedded System and a Desktop application. The device allows people to receive a visual notification on their computer when a door knock is detected, so that the user doesn't miss a door knock. The Embedded System will detect door knocks by using an accelerometer to measure vibrations that reverberate through the door. The system will be set up so that it filters out sounds that are not obviously door knocks. The Embedded System will be mounted onto a door where it will communicate with the desktop or mobile application over Bluetooth. </p>
-    
-    <p style="text-align:justify; margin-left: 60px; margin-right: 60px;"> The application was being developed natively using the Universal Windows Platform as the back end application, while the front end application was being made in Electron. However, the team learned that UWP was purposefully designed in a way to make inter-process communication difficult, so the team is now exclusively using Electron. When the embedded system detects a knock, it will
-    determine if it is significant enough to relay the data to the application. The computer or mobile device will then determine if the detected signal is a door knock and alert the user by displaying a notification and playing a chime. Both the chime and message can be customized to the user's liking. The message will appear on the user's screen regardless of what application is currently running so that the message is not missed. </p>
-    
-
-    <p style="text-align:justify; margin-left: 60px; margin-right: 60px;"> The system will record and include timestamps of any door knocks it detects. The plan is for the system's software to be installed by a USB dongle, but might be changed so that it can be installed and downloaded from the internet directly. The embedded system is currently a combination of an Arduino Atmega microcontroller, an accelerometer, and a Bluetooth shield. The embedded system will be compact enough so that it is easy to set up.</p>
-  </div>  
-</div>
-<script>
-  // Src: https://stackoverflow.com/questions/51363284/how-to-make-the-scroll-speed-of-background-image-of-the-webpage-slower
-  $(document).scroll(function() {
-  var scroll = $(window).scrollTop();
-  $(".backgroundimage").css("top", "0" + (scroll / 1.8) + "px");
-  });
-</script>
-
-</body>
-
+        <p style="text-align: justify; margin-left: 60px; margin-right: 60px">
+          The system records and includes timestamps of any door knocks it
+          detects. The software can be installed online, and will work as long
+          as there is a Knock Alert device that is available. The embedded
+          system is currently a combination of an Nordic microcontroller, an
+          accelerometer, and a Bluetooth shield. The embedded system is compact
+          enough so that it is easy to set up.
+        </p>
+      </div>
+    </div>
+    <div class="banner">
+      <h1 class="animated animated--fadeIn">
+        <a class="button" href="team.html">Meet the team!</a>
+      </h1>
+    </div>
+    <div class="banner">
+      <h1 class="animated animated--fadeIn">
+        <a
+          class="button"
+          href="https://www.dropbox.com/s/81q3zns2cr6kjt1/Knock%20Alert-1.0.0%20Setup.exe?dl=1"
+          >Download the app!</a
+        >
+        <p>
+          Note - Knock detection will only work with a KnockAlert device, but
+          you can demo the basic app features.
+        </p>
+      </h1>
+    </div>
+    <script>
+      // Src: https://stackoverflow.com/questions/51363284/how-to-make-the-scroll-speed-of-background-image-of-the-webpage-slower
+      $(document).scroll(function () {
+        var scroll = $(window).scrollTop();
+        $(".backgroundimage").css("top", "0" + scroll / 1.8 + "px");
+      });
+    </script>
+  </body>
 </html>

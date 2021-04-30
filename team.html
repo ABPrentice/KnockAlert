@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<title>Team</title>
+<title>Knock Alert! - Team</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -213,7 +213,117 @@ p {
 	}
 }
 
+/* 2D tiles */
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
+.centeredNoWrap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  white-space: nowrap;
+}
+
+.portraitA {
+  margin-top: -20px;
+  border-radius: 50%;
+  width:40%;
+  height:auto;
+}
+.TileTitle_1_Larger {
+  color: #ddeeff;
+  font-size: 250%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.TileTitle_1_Larger_first_letter {
+  color: #ddeeff;
+  font-size: 275%;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.TileTitle_2_Larger {
+  color: #ddeeff;
+  font-size:150%;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.TileTitle_2_Larger_first_letter {
+  color: #ddeeff;
+  font-size:175%;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.TileTitle_3_Larger {
+  color: #ddeeff;
+  font-size:140%;
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+hr.border75 {
+  border: 1px solid #ddeeff;
+  width: 75%;
+}
+
+hr.border50 {
+  border: 1px solid #ddeeff;
+  width: 50%;
+}
+
+p.TileText {
+  font-size:125%;
+  color: #ddeeff;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+a.ContactLink {
+  color: #ddeeff;
+
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0 ,0);
+  transition: border-bottom 300ms;
+  padding-left:10px;
+  padding-right: 10px;
+}
+a.ContactLink:hover {
+
+  border-bottom: 1px solid white;
+}
+
+.TileA_1 {
+  width: 101%;
+  padding: 10px;
+  margin:-5px -5px -5px -5px;
+  color: #ddeeff;
+  background-color: rgb(0, 117, 250);
+  display:block;
+}
+
+.TileA_2 {
+  width: 101%;
+  padding: 10px;  
+  margin:-5px -5px -5px -5px;
+  color: #ddeeff;
+  background-color: rgb(19, 148, 105);
+  display:block;
+}
+
+.tileTable {
+  width:100%; 
+  border-spacing: 0;
+  border-collapse: collapse; 
+  padding: 0; 
+  margin: 0;
+}
 </style>
 
 
@@ -251,14 +361,69 @@ p {
 
 
 <div class = "banner">
-  <h1 class = "animated animated--fadeIn">Knock knock... who's there?</h1>
+  <h1 class = "animated animated--fadeFromBelow">Knock knock... who's there?</h1>
 </div>
+
+<table class= "tileTable">
+  <tr>
+    <th>
+      <div class = "animated animated--fadeFromBelow TileA_1" style = "margin-top:-1px">
+        <img class = "portraitA centered" src="https://i.imgur.com/XWaRQVO.jpg" alt="Kevin Gundlach Portrait"><br>
+
+        <h1><span class="TileTitle_1_Larger_first_letter">K</span><span class="TileTitle_1_Larger">EVIN </span> <span class="TileTitle_1_Larger_first_letter">G</span><span class="TileTitle_1_Larger">UNDLACH</span></h1>
+        <hr class = "border50">
+        <h1><span class="TileTitle_2_Larger_first_letter">B</span><span class="TileTitle_2_Larger">LUETOOTH  </span> <span class="TileTitle_2_Larger_first_letter">/ F</span><span class="TileTitle_2_Larger">RONT-</span><span class="TileTitle_2_Larger_first_letter">E</span><span class="TileTitle_2_Larger">ND</span></h1>
+        <p class="TileText">Hi! I handled the Bluetooth receiving side of the app. The Bluetooth component of the front-end was developed using Web-Bluetooth, in combination with a custom C++ node plugin. I wanted to work on this project to work with an awesome group of people, and learn new skills.</p>
+        <h1><span class="TileTitle_3_Larger">CONTACT:      <a class = "ContactLink" href="https://www.linkedin.com/in/kevin-gundlach-4b4475173/">Linkedin</a>     <a class = "ContactLink" href="https://github.com/DoubleKevin07">GitHub</a></span></h1>
+
+      </div>
+    </th>
+    <th>
+      <div class = "animated animated--fadeFromBelow TileA_2">
+        <img class = "portraitA centered" src=https://i.imgur.com/fYVIVRA.png" alt="Nicolas Jones Portrait"><br>
+
+        <h1><span class="TileTitle_1_Larger_first_letter">N</span><span class="TileTitle_1_Larger">ICOLAS </span> <span class="TileTitle_1_Larger_first_letter">J</span><span class="TileTitle_1_Larger">ONES</span></h1>
+        <hr class = "border50">
+        <h1><span class="TileTitle_2_Larger_first_letter">E</span><span class="TileTitle_2_Larger">MBEDDED  </span> <span class="TileTitle_2_Larger_first_letter">S</span><span class="TileTitle_2_Larger">YSTEM</span></h1>
+        <p class="TileText">I created the Embedded System with Alton, using Nordic, to relay accelerometer data to Electron. The Embedded System is composed of an accelerometer and a Bluetooth Shield. I worked on this project to get experience with interfacing embedded systems with modern apps.</p>
+        <h1><span class="TileTitle_3_Larger">CONTACT:      <a class = "ContactLink" href="https://www.linkedin.com/in/nicolas-jones-66b485166//">Linkedin</a>     <a class = "ContactLink" href="https://github.com/BananaPanorama">GitHub</a></span></h1>
+
+      </div>
+    </th>
+  </tr>
+  <tr>
+    <th>
+      <div class = "animated animated--fadeFromBelow TileA_2">
+        <img class = "portraitA centered" src="https://i.imgur.com/GzEcI5Y.png" alt="Ben Hull Portrait"><br>
+
+        <h1><span class="TileTitle_1_Larger_first_letter">B</span><span class="TileTitle_1_Larger">EN </span> <span class="TileTitle_1_Larger_first_letter">H</span><span class="TileTitle_1_Larger">ULL</span></h1>
+        <hr class = "border50">
+        <h1><span class="TileTitle_2_Larger_first_letter">F</span><span class="TileTitle_2_Larger">RONT-</span> <span class="TileTitle_2_Larger_first_letter">E</span><span class="TileTitle_2_Larger">ND</span></h1>
+        <p class="TileText">I created the Electron-React-webscript boilerplate, and created the main functionality of the front-end. I wanted to learn Electron in order to get more experience with frameworks and modern-app development. In addition, this was a great opportunity to learn how different technologies can work together.</p>
+        <h1><span class="TileTitle_3_Larger">CONTACT:      <a class = "ContactLink" href="https://www.linkedin.com/in/ben-h-90a205133/">Linkedin</a>     <a class = "ContactLink" href="https://github.com/bn-hull">GitHub</a></span></h1>
+
+      </div>
+    </th>
+    <th>
+      <div class = "animated animated--fadeFromBelow TileA_1">
+        <img class = "portraitA centered" src="https://i.imgur.com/oeGT1RT.png" alt="Alton Prentice Portrait"><br>
+
+        <h1><span class="TileTitle_1_Larger_first_letter">A</span><span class="TileTitle_1_Larger">LTON </span> <span class="TileTitle_1_Larger_first_letter">P</span><span class="TileTitle_1_Larger">RENTICE</span></h1>
+        <hr class = "border50">
+        <h1><span class="TileTitle_2_Larger_first_letter">A</span><span class="TileTitle_2_Larger">LGORITHM  </span> <span class="TileTitle_2_Larger_first_letter">/ H</span><span class="TileTitle_2_Larger">ARDWARE</span></h1>
+        <p class="TileText">I worked on sending data from the embedded system to the desktop application, both in the form on a ping and raw accelerometer data. I also worked on the algorithms that detect door knocks. I wanted to work on this project to get experience with a wide range of tools. I also made the physical box!</p>
+        <h1><span class="TileTitle_3_Larger">CONTACT:      <a class = "ContactLink" href="mailto: aprentice@nevada.unr.edu">Email</a>     <a class = "ContactLink" href="https://github.com/ABPrentice">GitHub</a></span></h1>
+
+      </div>
+    </th>
+  </tr>
+</table>
 <div class = "container ">
     <h3>University of Nevada Reno CSE Department</h3>
 
     <h4>Team 19:</h4>
     <div class = "b">
-    <p style="text-align:center;"> Nicholas Jones<br />Alton Prentice<br />Kevin Gundlach<br />Ben Hull </p>
+    <p style="text-align:center;"> Nicolas Jones<br />Alton Prentice<br />Kevin Gundlach<br />Ben Hull </p>
     
     <h4>Instructors:</h4>
     <div class = "b">
